@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="../static/script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    <title>Data Analytics for employee productivity</title>
+</head>
+
+<body>
+    <form action="/process" method="post" enctype="multipart/form-data">
+        <div class="block">
+            <h1>Evaluating and enhancing employee productivity A data driven approach </h1>
+        </div>
+        <br><br><br><br>
+        <div class="data">
+            <img src="../static/images/analyse.png">
+            <h1>Drag & drop your CSV or xlsx file</h1>
+            <form action="/process" method="post" enctype="multipart/form-data">
+                or<br>
+                <span><strong>Browse your File</strong><input type="file" class="input" name="file" accept=".xlsx"
+                        required></span>
+                <br>
+                <button class="submit" type="submit">Process</button>
+            </form>
+        </div>
+</body>
+
+</html>

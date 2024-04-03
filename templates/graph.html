@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Productivity</title>
+</head>
+<body>
+    <h1>Employee Productivity</h1>
+    
+    <!-- Display the graph image -->
+    <img src="data:image/png;base64, {{ image_base64 }}" alt="Employee Productivity Chart">
+    <a href="/download_graph">Download Graph</a>
+    
+    <h2>Explanation and Labels</h2>
+    
+    <p>Here, we have generated a graph representing employee productivity. The graph provides a visual representation of productivity percentages for each employee.</p>
+    
+    <p>The pivot table below shows additional information about employee effort for further analysis. The table presents monthly effort values for each employee.</p>
+    <h3>Pivot Table _  effort</h3>
+    
+    <!-- Display the pivot table as an HTML table -->
+    <div class="table-responsive">
+        {{ pivot_table2 | safe }}
+    </div>
+    <a href="/download_pivot_table">Download Pivot Table</a>
+    <h3>Median Effort</h3>
+    <p>The median effort for the selected employees is: {{ median_effort }}</p>
+
+
+    <h3>Pivot Table</h3>
+    
+    <!-- Display the pivot table as an HTML table -->
+    <div class="table-responsive">
+        {{ pivot_table | safe }}
+    </div>
+    <h3>Pie Chart - Effort Distribution</h3>
+     <!-- Display the graph image -->
+     <img src="data:image/png;base64, {{ pie_image_base64 }}" alt="Effort Distribution Pie Chart">
+
+    
+</body>
+</html>
